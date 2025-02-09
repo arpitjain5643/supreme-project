@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect } from 'react';
 
 const Navbar: React.FC = () => {
   const [visible, setVisible] = useState(true);
@@ -15,14 +15,14 @@ const Navbar: React.FC = () => {
       setLastScrollY(currentScrollY);
     };
 
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
   }, [lastScrollY]);
 
   return (
     <nav
       className={`fixed top-0 left-0 w-full bg-[#F8FCFC] shadow-md py-2 px-6 flex justify-between items-center z-50 transition-transform duration-500 ${
-        visible ? "translate-y-0" : "-translate-y-full"
+        visible ? 'translate-y-0' : '-translate-y-full'
       }`}
     >
       {/* Logo */}

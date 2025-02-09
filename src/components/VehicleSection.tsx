@@ -1,10 +1,10 @@
-import { useRef, useEffect, useState } from "react";
+import { useRef, useEffect, useState } from 'react';
 
 const VehicleSection = () => {
   const scrollContainerRef = useRef<HTMLDivElement>(null);
-  const [activeSection, setActiveSection] = useState<"passenger" | "commercial">("passenger");
+  const [activeSection, setActiveSection] = useState<'passenger' | 'commercial'>('passenger');
   const isScrolling = useRef(false);
-  
+
   useEffect(() => {
     const handleWheelScroll = (event: WheelEvent) => {
       if (!scrollContainerRef.current || isScrolling.current) return;
@@ -16,15 +16,15 @@ const VehicleSection = () => {
 
       if (event.deltaY > 0) {
         // Scroll down → Move to Commercial
-        if (activeSection === "passenger") {
-          setActiveSection("commercial");
-          scrollContainerRef.current.scrollBy({ top: scrollAmount, behavior: "smooth" });
+        if (activeSection === 'passenger') {
+          setActiveSection('commercial');
+          scrollContainerRef.current.scrollBy({ top: scrollAmount, behavior: 'smooth' });
         }
       } else if (event.deltaY < 0) {
         // Scroll up → Move to Passenger
-        if (activeSection === "commercial") {
-          setActiveSection("passenger");
-          scrollContainerRef.current.scrollBy({ top: -scrollAmount, behavior: "smooth" });
+        if (activeSection === 'commercial') {
+          setActiveSection('passenger');
+          scrollContainerRef.current.scrollBy({ top: -scrollAmount, behavior: 'smooth' });
         }
       }
 
@@ -41,15 +41,15 @@ const VehicleSection = () => {
 
       if (touchMove < window.innerHeight / 2) {
         // Swipe up → Move to Passenger
-        if (activeSection === "commercial") {
-          setActiveSection("passenger");
-          scrollContainerRef.current.scrollBy({ top: -200, behavior: "smooth" });
+        if (activeSection === 'commercial') {
+          setActiveSection('passenger');
+          scrollContainerRef.current.scrollBy({ top: -200, behavior: 'smooth' });
         }
       } else {
         // Swipe down → Move to Commercial
-        if (activeSection === "passenger") {
-          setActiveSection("commercial");
-          scrollContainerRef.current.scrollBy({ top: 200, behavior: "smooth" });
+        if (activeSection === 'passenger') {
+          setActiveSection('commercial');
+          scrollContainerRef.current.scrollBy({ top: 200, behavior: 'smooth' });
         }
       }
 
@@ -58,14 +58,14 @@ const VehicleSection = () => {
 
     const scrollContainer = scrollContainerRef.current;
     if (scrollContainer) {
-      scrollContainer.addEventListener("wheel", handleWheelScroll, { passive: false });
-      scrollContainer.addEventListener("touchmove", handleTouchScroll, { passive: false });
+      scrollContainer.addEventListener('wheel', handleWheelScroll, { passive: false });
+      scrollContainer.addEventListener('touchmove', handleTouchScroll, { passive: false });
     }
 
     return () => {
       if (scrollContainer) {
-        scrollContainer.removeEventListener("wheel", handleWheelScroll);
-        scrollContainer.removeEventListener("touchmove", handleTouchScroll);
+        scrollContainer.removeEventListener('wheel', handleWheelScroll);
+        scrollContainer.removeEventListener('touchmove', handleTouchScroll);
       }
     };
   }, [activeSection]);
@@ -87,16 +87,16 @@ const VehicleSection = () => {
         <div
           ref={scrollContainerRef}
           className="ml-4 md:ml-20 max-h-[200px] flex flex-col justify-start"
-          style={{ overflowY: "hidden" }}
+          style={{ overflowY: 'hidden' }}
         >
           {/* Passenger Vehicles */}
-          <div className={`transition-opacity duration-500 ${activeSection === "passenger" ? "opacity-100" : "opacity-30"}`}>
+          <div key={activeSection} className={`transition-opacity duration-500 ${activeSection === 'passenger' ? 'opacity-100' : 'opacity-30'}`}>
             <h2 className="text-lg md:text-xl font-bold text-left">Passenger vehicles</h2>
             <p className="text-gray-300 text-sm md:text-base text-left">Revving up Nonwoven innovation from interior to exterior.</p>
           </div>
 
           {/* Commercial Vehicles */}
-          <div className={`mt-6 md:mt-10 transition-opacity duration-500 ${activeSection === "commercial" ? "opacity-100" : "opacity-30"}`}>
+          <div key={activeSection} className={`mt-6 md:mt-10 transition-opacity duration-500 ${activeSection === 'commercial' ? 'opacity-100' : 'opacity-30'}`}>
             <h2 className="text-lg md:text-xl font-bold text-left">Commercial vehicles</h2>
             <p className="text-gray-600 text-sm md:text-base text-left">Advancing Nonwoven engineering for heavy-duty vehicles.</p>
           </div>
@@ -105,7 +105,7 @@ const VehicleSection = () => {
 
       {/* Bottom Navigation */}
       <div className="absolute bottom-6 md:bottom-10 right-4 md:right-10 flex justify-center space-x-4 md:space-x-6 text-gray-500 text-xs md:text-sm">
-        <span className={activeSection === "passenger" ? "text-white" : "text-gray-500"}>Complete Body</span>
+        <span className={activeSection === 'passenger' ? 'text-white' : 'text-gray-500'}>Complete Body</span>
         <span className="text-gray-500">Front</span>
         <span className="text-gray-500">Cabin</span>
         <span className="text-gray-500">Trunk</span>
