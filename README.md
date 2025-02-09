@@ -1,11 +1,12 @@
 # **Supreme Group Website \- Frontend Implementation**
 
  **Live Demo:** [Demo Link](https://supreme-group.netlify.app/)
+
  **GitHub Repository:** [Repository Link](https://github.com/arpitjain5643/supreme-project.git) 
 
 ---
 
-## ** Table of Contents**
+##  Table of Contents
 
 *  Overview  
 *  Tech Stack  
@@ -21,11 +22,11 @@
 
 ---
 
-## ** Overview**
+##  Overview
 
 This project is a **frontend implementation** of the **Supreme Group website**, based on the provided **Figma design**. The primary objective was to create a **performant, accessible, and maintainable** React-based application while following **modern best practices**.
 
-### ** Key Features**
+###  Key Features
 
 ✔️ **Built using React & TypeScript** for type safety and maintainability.  
 ✔️ **Tailwind CSS** for efficient styling.  
@@ -38,7 +39,7 @@ This project is a **frontend implementation** of the **Supreme Group website**, 
 
 ---
 
-## ** Tech Stack**
+##  Tech Stack
 
 | Technology | Purpose |
 | ----- | ----- |
@@ -51,16 +52,16 @@ This project is a **frontend implementation** of the **Supreme Group website**, 
 
 ---
 
-## ** Project Setup**
+##  Project Setup
 
-### ** Prerequisites**
+###  Prerequisites
 
 Ensure you have the following installed before starting:
 
 * `Node.js` (v16+ recommended)  
 * `npm` or `yarn`
 
-### ** Installation & Running the Project**
+###  Installation & Running the Project
 
 
 `# Clone the repository`  
@@ -77,21 +78,21 @@ Ensure you have the following installed before starting:
 
 ###  Testing and Linting 
 
+
 `# Run test cases and code coverage`  
-`npm run test   # or yarn dev`
+`npm run test `
 
 `#run lint command `  
 `npm run lint`
 
-`# Fix lint issue(fixables)`  
-`npm run lint:fix`
+
 ---
 
 ##  Component-Based Architecture
 
 This project follows a **modular component-based structure** to ensure **maintainability and scalability**.
 
-### ** Folder Structure**
+###  Folder Structure
   
 `📦 src`  
  `┣ 📂 components    # Reusable UI Components`  
@@ -101,11 +102,11 @@ This project follows a **modular component-based structure** to ensure **maintai
 
 ---
 
-## **♿ Accessibility (WCAG & ARIA)**
+##  Accessibility (WCAG & ARIA)
 
 This project follows **Web Content Accessibility Guidelines (WCAG)** and **ARIA (Accessible Rich Internet Applications)** best practices to ensure inclusivity.
 
-### ** Implemented Accessibility Features:**
+###  Implemented Accessibility Features:
 
 * **Semantic HTML elements** for better screen reader support.  
 * **ARIA attributes** for interactive elements.  
@@ -113,9 +114,9 @@ This project follows **Web Content Accessibility Guidelines (WCAG)** and **ARIA 
 
 ---
 
-## ** Performance Optimization**
+##  Performance Optimization
 
-### ** Optimizations Implemented:**
+###  Optimizations Implemented
 
 ✔️ **Lazy Loading** with `React.lazy()`  
 ✔️ **Code Splitting** via dynamic imports  
@@ -125,7 +126,7 @@ This project follows **Web Content Accessibility Guidelines (WCAG)** and **ARIA 
 
 ---
 
-## ** Coding Standards**
+##  Coding Standards
 
 To maintain **code quality and consistency**, the following **ESLint rules** were enforced:  
 ✔️ **Single Quotes (`'`) instead of Double Quotes (`"`).**  
@@ -135,18 +136,18 @@ To maintain **code quality and consistency**, the following **ESLint rules** wer
 
 ---
 
-## **🧪 Testing Implementation**
+##  Testing Implementation
 
-### **✅ Testing Approach:**
+###  Testing Approach:
 
 * **Unit Tests** using `Jest` & `React Testing Library`.  
 * **Component Testing** for UI validation.
 
 ---
 
-## **📌 Challenges & Learnings**
+##  Challenges & Learnings
 
-### **Challenges Faced:**
+### Challenges Faced
 
 * Implementing **pixel-perfect** responsiveness.  
 * Ensuring **strict TypeScript typings**.  
@@ -154,7 +155,7 @@ To maintain **code quality and consistency**, the following **ESLint rules** wer
 * Animation **Adding Animations using Tailwind**.
 
 
-### **Learnings & Takeaways:**
+### Learnings & Takeaways:
 
 * **Tailwind CSS** significantly speeds up styling.  
 * **Lazy Loading** improves performance without affecting UX.  
@@ -162,23 +163,24 @@ To maintain **code quality and consistency**, the following **ESLint rules** wer
 
 ---
 
-## **🔮 Future Enhancements**
+##  Future Enhancements
 
-### Add **Animations** using Framer Motion.  
-### Implement **Dark Mode**.  
-### Improve **SEO & Metadata Optimization**.  
-### Enhance **Form Validation** with better error handling.
-### Implement **Authentication & Security Best Practices**.
-### Add **Husky for Git Hooks** to enforce linting and formatting before commits.
-### Integrate **Telemetry & Analytics** for performance monitoring and user insights.
-### Introduce **Redux for State Management** to handle global application state efficiently.
+* Add **Animations** using Framer Motion.  
+* Implement **Dark Mode**.  
+* Improve **SEO & Metadata Optimization**.  
+* Enhance **Form Validation** with better error handling.
+* Implement **Authentication & Security Best Practices**.
+* Add **Husky for Git Hooks** to enforce linting and formatting before commits.
+* Integrate **Telemetry & Analytics** for performance monitoring and user insights.
+* Introduce **Redux for State Management** to handle global application state efficiently.
 
 
 ---
 
-## ** Contact & Contribution**
+## Contact & Contribution
 
-Contributions are welcome!  Feel free to submit pull requests or raise issues. 
+Contributions are welcome!  Feel free to submit pull requests or raise issues.
+
 
 ###  Email: arpitjain5643@gmail.com
 
